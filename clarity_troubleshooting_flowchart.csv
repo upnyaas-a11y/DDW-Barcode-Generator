@@ -1,0 +1,11 @@
+Step,Question/Check,Action_If_Yes,Priority_Level
+1,What type of output is blurry?,Continue to specific category,Start
+2,Is it computer screen text?,Go to Display/Monitor solutions,High
+3,Is it printed documents?,Go to Print Output solutions,High
+4,Is it PDF files?,Go to PDF Document solutions,High
+5,Is it exported images?,Go to Image Export solutions,Medium
+6,Is it video/streaming?,Go to Video/Streaming solutions,Medium
+7,Is it software interface?,Go to Software Interface solutions,Medium
+8,Check resolution settings,Set to native/recommended resolution,Critical
+9,Check connection quality,"Replace cables, check connections",High
+10,Test with different settings,Apply appropriate optimization,Medium

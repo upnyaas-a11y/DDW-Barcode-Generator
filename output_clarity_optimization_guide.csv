@@ -1,0 +1,26 @@
+Output Type,Issue Category,Primary Solution,Secondary Solution,Prevention Method,Effectiveness Rating
+Display/Monitor Text,Text Rendering,Enable ClearType Text Tuner,Adjust Font Smoothing Settings,Use Native Resolution Always,High
+Display/Monitor Text,Resolution Mismatch,Set Native Resolution,Update Monitor Drivers,Calibrate Monitor Regularly,Very High
+Display/Monitor Text,DPI Scaling,Adjust DPI Scaling to 100-125%,Use Windows Scaling Helper,Keep DPI at Recommended,High
+Display/Monitor Text,Connection Problems,Check Cable Connections,Try Different Cable Type,Use Quality Cables,Medium
+Display/Monitor Text,Graphics Driver,Update Graphics Drivers,Use Windows Update,Keep Drivers Updated,High
+Print Output,Printer Alignment,Run Print Head Alignment,Clean Print Heads Manually,Regular Maintenance Schedule,Very High
+Print Output,Print Settings,Set Quality to Normal/Best,Adjust Printer Resolution,Use Appropriate Media Settings,High
+Print Output,Cartridge Issues,Clean/Replace Cartridges,Check Ink Levels,Monitor Ink Usage,High
+Print Output,Paper/Media,Use High-Quality Paper,Clean Paper Path,Store Paper Properly,Medium
+PDF Documents,Scan Quality,Rescan at 300+ DPI,Use Adobe Acrobat Enhance,Scan at Appropriate Resolution,Very High
+PDF Documents,Compression,Use Lossless Compression,Apply PDF Optimization,Choose Right Compression Level,High
+PDF Documents,OCR Issues,Run OCR Enhancement,Use Smallpdf OCR Tool,Use High-Quality Originals,High
+PDF Documents,Vector vs Raster,Convert to Vector Text,Recreate from Original,Start with Vector Sources,Very High
+Image Exports,Resolution,Export at 300+ DPI,Use AI Upscaling Tools,Plan Resolution Requirements,Very High
+Image Exports,Compression,Use 85-90% JPEG Quality,Optimize File Size Balance,Test Export Settings,High
+Image Exports,File Format,Choose PNG for Text/Graphics,Consider WebP Format,Choose Format by Use Case,High
+Image Exports,Color Space,Convert CMYK to RGB,Use sRGB Color Profile,Design in RGB for Web,Medium
+Video/Streaming,Encoding Quality,Use H.264 with High Bitrate,Apply Video Enhancement AI,Test Stream Settings First,High
+Video/Streaming,Resolution/Bitrate,Match Resolution to Platform,Use Adaptive Bitrate Streaming,Monitor Bandwidth Usage,Very High
+Video/Streaming,Frame Rate,Use 30/60 FPS Consistently,Enable Motion Interpolation,Use Consistent Settings,High
+Video/Streaming,Compression,Minimize Compression,Use Professional Codecs,Regular Quality Checks,Medium
+Software Interface,High DPI Issues,Disable Display Scaling per App,Adjust Registry DPI Settings,Use DPI-Aware Applications,High
+Software Interface,Application Scaling,Set Application DPI Override,Use Per-Monitor DPI Awareness,Test on Target Hardware,Very High
+Software Interface,Compatibility Mode,Use Compatibility Settings,Run as Administrator,Use Modern Software,High
+Software Interface,System Settings,Adjust Visual Effects,Reset Windows Appearance,Regular System Maintenance,Medium

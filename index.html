@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSN/WID Barcode Label Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>WSN/WID Barcode Label Generator</h1>
+            <p class="subtitle">Generate high-quality barcode labels with crystal-clear text and barcodes</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="card">
+                    <div class="card__body">
+                        <div class="form-group">
+                            <label for="codeInput" class="form-label">Enter WSN/WID Code</label>
+                            <div class="search-container">
+                                <input 
+                                    type="text" 
+                                    id="codeInput" 
+                                    class="form-control search-input" 
+                                    placeholder="Type WSN001, WSN002, or scan barcode..."
+                                    autocomplete="off"
+                                >
+                                <div class="suggestions" id="suggestions"></div>
+                            </div>
+                            <small class="help-text">Try sample codes: WSN001, WSN002, WSN003, WSN004, WSN005</small>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn--primary" id="generateBtn" disabled>
+                                Generate Label
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3>Upload Excel Files</h3>
+                        <p>Upload Excel files containing PROFORMA, VRP_LIQUIDATION, and WSN sheets</p>
+                    </div>
+                    <div class="card__body">
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-content">
+                                <svg class="upload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                <p>Drag and drop Excel files here or click to browse</p>
+                                <small>Supports .xlsx files with PROFORMA, VRP_LIQUIDATION, WSN sheets</small>
+                            </div>
+                            <input type="file" id="fileInput" accept=".xlsx,.xls" multiple hidden>
+                        </div>
+                        <div class="upload-progress" id="uploadProgress" style="display: none;">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">Processing files...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="card">
+                    <div class="card__header">
+                        <h3>Generated Label Preview</h3>
+                        <div class="label-actions" id="labelActions" style="display: none;">
+                            <button type="button" class="btn btn--secondary btn--sm" id="downloadBtn">
+                                Download PNG
+                            </button>
+                            <button type="button" class="btn btn--outline btn--sm" id="printBtn">
+                                Print Label
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <div class="canvas-container" id="canvasContainer">
+                            <div class="placeholder-content">
+                                <svg class="placeholder-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <p>Enter a WSN/WID code to generate label</p>
+                            </div>
+                            <canvas id="labelCanvas" class="label-canvas" style="display: none;"></canvas>
+                        </div>
+
+                        <div class="product-info" id="productInfo" style="display: none;">
+                            <h4>Product Details</h4>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <span class="info-label">WSN:</span>
+                                    <span class="info-value" id="wsnValue">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">WID:</span>
+                                    <span class="info-value" id="widValue">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">FSN:</span>
+                                    <span class="info-value" id="fsnValue">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Brand:</span>
+                                    <span class="info-value" id="brandValue">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">MRP:</span>
+                                    <span class="info-value" id="mrpValue">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">FSP:</span>
+                                    <span class="info-value" id="fspValue">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="status-message" id="statusMessage"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
